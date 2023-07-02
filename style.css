@@ -6,46 +6,37 @@
     font-family: 'spartan' sans-serif;
 }
 :root {
-    --color-primary: #088178;
+    --color-primary: #538481;
     --color-secondary: #E3E6F3;
     --color-text: #577e73;
+    scroll-behavior: smooth;
 }
-    
-/* img{
-    height: 400px;
-    width:500px;
-    
-} */
+
 
 h1{
     font-size: 50px;
-    line-height: 180%; /* you mean 64%?*/
-    /* color: #222; */
+    line-height: 180%;
     padding: right;
    
 }
 h2{
     font-size: 46px;
-    line-height: 180%; /* 54% ? */
-    /* color: #222; */
+    line-height: 180%;
 }
 h4{
     font-size: 20px;
     /* color: #222; */
 }
-h6{
-    /* font-size: 700px; */
-    /* font-size: 12px; */
-}
 p {
     font-size: 16px;
-    /* color: #465b52; */
     margin: 15px;
 }
-.section-p1{
-    /* padding:40px 80px; */
+.btn-flex-end {
+    margin-top: auto;
 }
-
+section{
+    margin-bottom: 40px;
+}
 .section-m1{
     margin: 40px 0;
 }
@@ -64,13 +55,14 @@ body{
     padding: 10px;
     color: var(--color-text);
 }
+
 /*header start*/
 #header{
    display: flex;
    align-items: center;
    justify-content: space-between;
    padding: 10px 50px;
-   background:var(--color-secondary);
+   background: var(--color-secondary);
    box-shadow: 0 5px rgb(0, 0, 0, 0,0.06);
    border-radius: 20px;
    margin-bottom: 20px;
@@ -81,16 +73,28 @@ body{
     height: 150px;
     border-radius: 10px;
 }
+.search-form {
+    display: flex;
+    background-color: #fff;
+    margin: 0 20px;
+    border-radius: 10px;
+    padding: 10px; 
+}
 .search-box {
     border: none;
     border-radius: 10px;
     height: 25px;
     color: var(--color-text);
+    padding: 10px;
 }
 .search-box:focus, .search-box:focus-visible {
-    border: 1px solid var(--color-secondary);
-    border-block-color: transparent!important;
+    border: 0;
+    /* border-block-color: transparent!important; */
     outline: 0;
+}
+.search-icon{
+    width: 30px;
+    height: 30px;
 }
 #navbar{
     display: flex;
@@ -164,6 +168,9 @@ aside a {
 aside a:hover {
     font-weight: bold;
 }
+.cart-btn {
+    margin: 30px 0;
+}
 
 /* MAIN SECTION */
 main {
@@ -178,7 +185,7 @@ main {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-image: url("images/pexels-mikhail-nilov-6740821.jpg");
+    background-image: url("images/pexels-mikhail-nilov-6740821 (1).jpg");
     /* background-color: transparent; */
     width: 100%;
     height: 60vh;
@@ -187,7 +194,7 @@ main {
     border-radius: 20px;
     margin-bottom: 20px;
 }
-button.normal{
+button, .btn{
     font-size: 14px;
     font-weight: 600;
     padding: 25px 30px;
@@ -198,20 +205,20 @@ button.normal{
     border: none;
     outline: none;
     transition: 0.2s;
+    margin-top: auto;
 }
-#sm_banner{
+#sm_banner, #banner3{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
-#sm_banner.banner-box{
+.banner-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("images/pexels-julia-larson-6455953.jpg");
+    /* background-image: url("images/dumbell-1.png"); */
     min-width: 580px;
-    height: 50vh;
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -224,7 +231,7 @@ button.normal{
 }
 .fe-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(7,400px);
     gap: 20px;
     text-align: center;
 }
@@ -246,13 +253,17 @@ button.normal{
 }
 .pro-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
     text-align: center
+}
+.pro {
+    background-color: var(--color-secondary);
 }
 .pro img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -267,3 +278,113 @@ footer {
     color: var(--color-secondary);
     border-radius: 10px;
 }
+.icon-container {
+    display: flex;
+    gap: 10px;
+    width: 30px;
+}
+.icon-container img {
+    width: 15px;
+}
+/* ***********************CART PAGE*********************** */
+.image-cart{
+    width: 250px;
+    height: auto;
+}
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.shipping_shh{
+    width: 150px;
+    height: 150px;
+}
+
+   
+.banner-box{
+    display: grid;
+    grid-template-columns: repeat(7,400px);
+    gap: 10px;
+    text-align: center;
+}
+.box2{
+    display: grid;
+    grid-template-columns: repeat(7,400px);
+    gap: 10px;
+    text-align: center;
+}
+/*single product*/
+#prodetails{
+display: flex;
+margin-top: 20px;
+}
+
+#prodetails.single-pro-image{
+ width: 40%;
+ margin-right: 50px;
+
+}
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis:24%;
+    cursor: pointer;
+}
+#prodetails.single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+
+}
+#prodetails.single-pro-details h4{
+    padding: 40px 0 20px 0;
+
+}
+#prodetails.single-pro-details h2{
+    font-size: 26px;
+}
+#prodetails.single-pro-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10;
+
+}
+#prodetails.single-pro-details button {
+    background: #088178;
+    color: #fff;
+}
+#prodetails.single-pro-details input:focus{
+    outline: none;
+}
+#prodetails.single-pro-details input span{
+    line-height: 25px;
+}
+/*single product*/
+#prodetails{
+    display: flex;
+    flex-direction:column ;
+
+}
+#prodetails.single-pro-image{
+    width: 100%;
+    margin-right: 0px;
+}
+#prodetails .single-pro.details {
+    width: 100%;
+}
+
+
+
+/* ***********************CHECKOUT PAGE*********************** */
+/* 
+Can you see this? yeah
+check the "sproducts" this, which page? i think I'm lost
+ive created a new file for the single page something nu , the one that will give more details to the product :no-button
+that's what ive named sproduct
+do you get it now?
+oh ok yh, but I can't find that file here o. write in that file lemme see
+I've seen it now. but move it into the main project folder */

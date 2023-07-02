@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM EQUIPMENT RETAIL CENTER </title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/regular.min.css">
+    <link href="assets/fontawesome/webfonts/fa-regular-400.ttf" type="font/ttf">
     <link rel="stylesheet" href="style.css">
-    
+    <!-- JAVASCRIPT -->
 </head>
+
 <body>
     <header id="header">
         <a href="#"><img src="images/logo.png" class="logo" alt=""> </a>
         <div class="search-container">
-            <form action="index.html#product"><input type="text" class="search-box"></form>
+            <form action="" class="search-form">
+                <input type="search" class="search-box">
+                <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
+            </form>
         </div>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a class="active" href="Shop.html">Shop</a></li>
                 <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a class="active" href="about.html">About</a></li>
-                <li><a class="active" href="Contact.html">Contact</a></li>
-                <li> <a class="active" href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
     <aside>
         <h3 class="sub-title">Categories</h3>
         <div class="category-container">
-            <a href="index.html#yoga">yoga</a>
-            <a href="index.html#kids">kids</a>
-            <a href="index.html#strength">strength / cardio</a></div>
+            <a href="index.html#yoga">Yoga</a>
+            <a href="index.html#kids">Kids</a>
+            <a href="index.html#strength">Strength</a>
+            <a href="index.html#cardio">Cardio</a>
+            <a href="repair.html">Repairs</a>
+        </div>
+        <a href="cart.html" class="cart-btn">
+            <button>Go To Cart</button>
+        </a>
     </aside>
     <div class="main-content-wrapper">
         <main>
@@ -40,175 +51,432 @@
                     <h2>Super value Deals</h2>
                     <h1>On all Products</h1>
                     <p>Save more with coupons & up to 70% off! </p>
-                    <button class="normal">Shop Now</button>
+                    <a href="#Product1">
+                        <button class="normal">Shop Now</button>
+                    </a>
                 </div>
             </section>
             <section id="Feature">
-                <div class="fe-container">
-                    <div class="fe-box">
-                        <img src="images/pexels-mikhail-nilov-6740821.jpg" alt="">
-                        <h6>Free Shipping</h6>
+                <marquee  direction="">
+                    <div class="fe-container">
+                        <div class="fe-box">
+                            <img class="shipping-1" src="features/free shipping.jpg" alt="">
+                            <h2>Free Shipping</h2>
+                        </div>
+                        <div class="fe-box">
+                            <img class="order_online" src="features/order online.jpg" alt="">
+                            <h2>Order Online</h2>
+                        </div>
+                        <div class="fe-box">
+                            <img class="save_money" src="features/save money.jpg" alt="">
+                            <h2>Save Money</h2>
+                        </div>
+                        <div class="fe-box">
+                            <img class="Happy_shopping" src="features/happy shopping.jpg" alt="">
+                            <h2>Happy shopping</h2>
+                        </div>
+                        <div class="fe-box">
+                            <img class="Pro_mo" src="features/Promotion-Strategy-1.jpg" alt="">
+                            <h2>Promotion</h2>
+                        </div>
+                        <div class="fe-box">
+                            <img class="happy_sell" src="features/happy sell.png" alt="">
+                            <h2>Happy Sell</h2>
+                        </div>
+                        <div class="fe-box">
+                            <img class="Supp_ort" src="features/support.jpg" alt="">
+                            <h2>Support</h2>
+                        </div>
                     </div>
-                    <div class="fe-box">
-                        <img src="images/pexels-karolina-grabowska-4397833.jpg" alt="">
-                        <h6>Order Online</h6>
-                    </div>
-                    <div class="fe-box">
-                        <img src="iimages/pexels-karolina-grabowska-4498294.jpg" alt="">
-                        <h6>Save Money</h6>
-                    </div>
-                    <div class="fe-box">
-                        <img src="images/pexels-koolshooters-9945037.jpg" alt="">
-                        <h6>Happy shopping</h6>
-                    </div>
-                    <div class="fe-box">
-                        <img src="images/pexels-lukas-669577.jpg" alt="">
-                        <h6>Promotion</h6>
-                    </div>
-                    <div class="fe-box">
-                        <img src="images/pexels-mikhail-nilov-6739945.jpg" alt="">
-                        <h6>Happy Sell</h6>
-                    </div>
-                    <div class="fe-box">
-                        <img src="images/pexels-mikhail-nilov-6740821.jpg" alt="">
-                        <h6>Support</h6>
-                    </div>
-                </div>
+                </marquee>
             </section>
             <section id="Product1" class="section-p1">
                 <h2 class="section-title">Featured Products</h2>
                 <p class="sub-title"> New Traning Equippments </p>
                 <div class="pro-container">
-                    <div class="pro">
-                        <img src="images/pexels-anastasia-shuraeva-4944427.jpg" alt="">
+                    <div class="pro" onclick="window.location.href='Sproduct.html'">
+                        <img src="images/cardio/Gym-Equipment-Background-PNG-Image.png" alt="">
                         <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$10</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
                         </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                         
                     </div>
                     <div class="pro">
-                        <img src="images/pexels-mikhail-nilov-6740821 (1).jpg" alt="">
+                        <img src="images/kids/exercise-equipment-for-children-removebg-preview.png" alt="">
                         <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$10</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
                         </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                        
                     </div>
                     <div class="pro">
-                        <img src="images/pexels-anastasia-shuraeva-4944427 (1).jpg" alt="">
+                        <img src="images/strength/bench-press-removebg-preview.png" alt="">
                         <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$10</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
                         </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                         
                     </div>
                     <div class="pro">
-                        <img src="images/pexels-anastasia-shuraeva-4944427 (2).jpg" alt="">
+                        <img src="images/yoga/kisspng-dumbbell-physical-exercise-exercise-equipment-barb-color-dumbbell-5a7d5637a435a5.2096580015181635116726-removebg-preview.png"
+                            alt="">
                         <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$10</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
                         </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-                    </div>
-                    <div class="pro">
-                        <img src="images/pexels-anastasia-shuraeva-4944427 (2).jpg" alt="">
-                        <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                        </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-                    </div>
-                    <div class="pro">
-                        <img src="images/pexels-andres-ayrton-6550849.jpg" alt="">
-                        <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                        </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-                    </div>
-                    <div class="pro">
-                        <img src="images/pexels-dom-j-45058.jpg" alt="">
-                        <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                        </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-                    </div>
-                    <div class="pro">
-                        <img src="images/pexels-ivan-samkov-4162485.jpg" alt="">
-                        <div class="description">
-                            <span>Brand Name</span>
-                        <h5>Product Name</h5>
-                        <div class="star">
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                            <i class="fas-fa-star"></i>
-                        </div>
-                        <h4>$50</h4>
-                    </div>
-                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                         
                     </div>
                 </div>
-                <p class="sub-title">KIDS</p>
-
-                <!-- similar grid here too -->
             </section>
+            <section id="yoga">
+                <p class="sub-title">YOGA</p>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="images/yoga/kisspng-dumbbell-physical-exercise-exercise-equipment-barb-color-dumbbell-5a7d5637a435a5.2096580015181635116726-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$36</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/yoga/png-transparent-yoga-pilates-mats-purple-color-children-taekwondo-material-purple-color-sports-equipment-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$10</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/yoga/pexels-karolina-grabowska-4498294-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$50</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/yoga/pexels-mikhail-nilov-6740821.jpg" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$58</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/yoga/Screen+Shot+2022-05-09+at+2.52.25+PM-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$40</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>                    
+                </div>
+            </section>
+
+            <!-- KIDS SECTION -->
+            <section id="kids">
+                <p class="sub-title">KIDS</p>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="images/kids/exercise-equipment-for-children-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$80</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/kids/images-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$30</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/kids/Mini-Treadmill-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Rainbow Toys Children Fitness Equipment</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$40</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/kids/Kids-Exercise-Equipment-Children-Bike-Fitness-Baby-Play-Gym-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$20</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/kids/kisspng-infant-fitness-centre-play-babygym-child-5b2f575978f252.8415387915298292094954-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$25</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/kids/Mini-Treadmill.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Rainbow Toys Children Fitness Equipment</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$15</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/kids/pexels-karolina-grabowska-4397833-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$23</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                </div>
+            </section>
+
+            <!-- STRENGTH SECTION -->
+            <section id="strength">
+                <p class="sub-title">STRENGTH</p>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="images/strength/bench-press-2.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$50</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/bench-press-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$60</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/dumbell-1-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$70</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/exercise-equipment-exercise-machine-fitness-centre-dumbbell-physical-exercise-barbell-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$80</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/Gym-Equipment-Background-PNG-Clip-Art.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Spirit Fitness Treadmill</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$43</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/Gym-Equipment-Background-PNG.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$30</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/Gym-Equipment-PNG-Background-Clip-Art.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$70</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/Gym-Equipment-PNG-Pic-Background.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Chest Press</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$60</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/Gym-Equipment-PNG-Transparent.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$50</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/gym-machine-exercise-equipment-mdmexBD-600-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$50</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/pexels-dom-j-45056-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Black Skip Rope</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$44</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/strength/pexels-dom-j-45058-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$37</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                </div>
+            </section>
+
+            <!-- CARDIO SECTION -->
+            <section id="cardio">
+                <p class="sub-title">Cardio</p>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="images/cardio/Gym-Equipment-Background-PNG-Image.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$32</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/cardio/Gym-Equipment-Clip-Art-Transparent-PNG.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Product Name</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$44</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="images/cardio/pexels-anastasia-shuraeva-4944427-removebg-preview.png" alt="">
+                        <div class="description">
+                            <span class="pro-name">Elite Gym Skelcore Group</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$57</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="Elite Gym Skelcore.jpg" alt="">
+                        <div class="description">
+                            <span class="pro-name">Elite Gym Skelcore</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$80</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                    <div class="pro">
+                        <img src="cardio manchine.jpg" alt="">
+                        <div class="description">
+                            <span class="pro-name">cardio manchine</span>
+                            <div class="star">⭐⭐⭐⭐</div>
+                            <h4 class="pro-cost">$77</h4>
+                            <button class="pro-cart-btn">Add to Cart</button>
+                        </div>
+                         
+                    </div>
+                </div>
+            </section>
+
             <footer>
-                Copyright ©2023 Juliana Assibi
+                <div class="col">
+                    <h4>Contact</h4>
+                    <p> <strong>address:</strong>Harruna Esseku, 3 street 534-13</p>
+                    <p> <strong>Phone:</strong> 0270257754 </p>
+                    <p> <strong>Hours:</strong>9:00 - 18:00, Mon-Sat </p>
+                </div>
+                <div class="icon-container">
+                    <h4>Follow Us on</h4>
+                    <a href="https://www.facebook.com">
+                        <img src="images/icons/facebook.png" alt="facebook-icon">
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <img src="images/icons/instagram.png" alt="instagram-icon">
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <img src="images/icons/twitter.png" alt="twitter-icon">
+                    </a>
+                </div>
             </footer>
         </main>
     </div>
     <script src="scrpt.js"></script>
 </body>
+
 </html>

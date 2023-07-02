@@ -1,0 +1,59 @@
+hr {
+    margin: 15px 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    row-gap: 20px;
+    column-gap: 10px;
+}
+input {
+    width: 100%; 
+    height: 60px;
+}
+.input-No{
+    width: 100%;
+}
+.input-no{
+    display: inline;
+}
+label[for="st-addr"], label[for="apt-no"] {
+    grid-column: 1/3;
+}
+.order-summary-container {
+    margin: 20px 0;
+}
+.promo-btn {
+    margin: 20px 0;
+}
+.summary-img{
+    width:120px;
+    height:100%;
+    margin-right: 15px;
+}
+.adjectment{
+    display: flex;
+    margin-bottom: 20px;
+    height: 200px;
+}
+.adjectment button{
+    display: inline;
+    margin-right: 15px;
+}
+.font-subtit1le1{
+    font-size: 18px;
+    font-weight: bold;
+}
+.flex-row{
+    justify-content: space-between;
+    display: flex;
+}
+
+
+/* ***************FOR MOBILE SCREENS*************** */
+@media (max-width: 800px) {
+    label {
+        
+    }
+}

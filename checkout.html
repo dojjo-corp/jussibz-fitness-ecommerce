@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#"><img src="images/logo.png" class="logo" alt=""> </a>
+        <div class="search-container">
+            <form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
+                <input type="search" class="search-box" placeholder="search...">
+                <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
+            </form>
+        </div>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a class="active" href="Shop.html">Shop</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a class="active" href="Contact.html">Contact</a></li>
+                <li> <a class="active" href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <aside>
+        <h3 class="sub-title">Categories</h3>
+        <div class="category-container">
+            <a href="index.html#yoga">Yoga</a>
+            <a href="index.html#kids">Kids</a>
+            <a href="index.html#strength">Strength</a>
+            <a href="index.html#cardio">Cardio</a>
+            <a href="repair.html">Repairs</a>
+        </div>
+        <a href="cart.html" class="cart-btn">
+            <button>Go To Cart</button>
+        </a>
+    </aside>
+    
+    <main>
+        <div class="checkout-form">
+            <h1 class="section-title">Checkout </h1>
+            <form action="" method="post">
+                <label for="first-name">
+                    <input class="input-no" type="text" name="first-name" placeholder="First-name" required>
+                </label>
+                <label for="last-name">
+                    <input class="input-no" type="text" name="last-name" placeholder="Last-name" requuired>
+                </label>
+                <label for="st-addr">
+                    <input class="input-No" type="text" name="st-addr" placeholder="Street-address"requuired>
+                </label>
+                <label for="apt-no">
+                    <input class="input-No" type="text" name="apt-no" placeholder="Apartment No"requuired>
+                </label>
+                <label for="first-name">
+                    <input class="input-no" type="text" name="first-name" placeholder="City"requuired>
+                </label>
+                <label for="first-name">
+                    <input class="input-no" type="text" name="first-name" placeholder="Provence"requuired>
+                </label>
+                <label for="first-name">
+                    <input type="text" name="first-name" placeholder="Postal Code"requuired>
+                </label>
+            </form>
+            <div class="order-summary-container"> 
+                <h2 class="font-subtit1le1"></h2>ORDER SUMMARY</h2>
+                <div class="flex-row"><span>Subtotal</span><span>$74.98CDN</span> </div>
+                <div class="flex-row"><span>Taxes</span> <span>-</span></div>
+                <div class="flex-row"><span>Shipping (items)</span><span>-</span></div>
+                <hr>
+                <h2 class="font-subtit1le1 flex-row">
+                    <span>TOTAl</span>
+                    <span>$74.8CDN</span>
+                </h2>
+                <button class="promo-btn">APPLY  PRO CODE OR DISCOUNT</button>
+
+            </div>
+           <div>
+                <h2 class="font-subtit1le1">BAG SUMMARY</h2>
+                <p>Arrives in 4-7days</p>
+                <div class="adjectment">
+                    <img class="summary-img" src="images/pexels-lukas-669577.jpg" alt="">
+                    <div>
+                        <p>product name</p>
+                        <p><span>Price</span><span>$65.67 CDN</span></p>
+                        <p>Quantity:1</p>
+                        <div>
+                            <button>Remove</button>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="adjectment">
+                    <img class="summary-img" src="images/pexels-lukas-669577.jpg" alt="">
+                    <div>
+                        <p>product name</p>
+                        <p>Price<span>$65.67 CDN</span></p>
+                        <p>Quantity:1</p>
+                        <div>
+                            <button>Remove</button>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p> <strong>address:</strong>Harruna Esseku, 3 street 534-13</p>
+                <p> <strong>Phone:</strong> 0270257754 </p>
+                <p> <strong>Hours:</strong>9:00 - 18:00, Mon-Sat </p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

@@ -13,103 +13,51 @@
     <!--have you joined?-->
     <header id="header">
         <a href="#"><img src="images/logo.png" class="logo" alt=""> </a>
-        <div class="search-container">
-            <form action="index.html#Product1" class="search-form">
-                <input type="text" class="search-box" placeholder="search...">
-                <input type="image" class="search-icon" src="images/icons/loupe.png" alt="search">
-            </form>
-        </div>
-        <div>
+        
+        <div class="nav-container">
+            <button class="toggle-btn">Menu</button>
             <ul id="navbar">
+                <li><form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
+                    <input type="search" class="search-box" placeholder="search...">
+                    <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
+                </form></li>
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a class="active" href="Shop.html">Shop</a></li>
                 <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a class="active" href="about.html">About</a></li>
-                <li><a class="active" href="Contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html">Contact</a></li>
             </ul>
         </div>
     </header>
     <section id="banner" class="section-m1" >
         <h4>REPAIR SERVICES</h4>
         <H2>UP TO <span>60% OFF </span> ALL ITEM NAME</H2>
-        <button class="normal" >Repair Here</button>
+        <a href="#req-form"><button>Repair Here</button></a>
     </section>
 
-    <section id="sm_banner"> 
-        <marquee behavior="" direction="">
-            <div class="banner-box">
-                <h2>Crazy Deals</h2>
-                <h2>Buy 1 get one Free</h2>
-                /////////////////
-                <div class="box2">
-                    <img class="shipping_shh" src="images/strength/pexels-dom-j-45056-removebg-preview.png" alt="">
-                    
-                </div>
-                <div class="box2">
-                    <img class="shipping_shh" src="images/strength/pexels-koolshooters-9945037-removebg-preview.png" alt="">
-                    
-                </div>
-                <div class="box2">
-                    <img class="shipping_shh" src="images/strength/pexels-pixabay-416717-removebg-preview.png" alt="">
-                    
-                </div>
-                <div class="box2">
-                    <img class="shipping_shh" src="images/strength/pexels-mikhail-nilov-6739945-removebg-preview.png" alt="">
-                   
-                </div>
-        </marquee>
-            ////////////////
-           
-        </div>
-        <div class="banner-box banner-box2">
-            <h2>Discription</h2>
-            <h3>Upcoming Equipment</h3>
-            <div class="box2">
-                <img class="shipping_shh" src="images/strength/bench-press-2.png" alt="">
-                
-            </div>
-            <div class="box2">
-                <img class="shipping_shh" src="images/strength/bench-press-removebg-preview.png" alt="">
-                
-            </div>
-            <div class="box2">
-                <img class="shipping_shh" src="images/strength/dumbell-1-removebg-preview.png" alt="">
-                
-            </div>
-            <div class="box2">
-                <img class="shipping_shh" src="images/strength/pexels-dom-j-45056-removebg-preview.png" alt="">
-               
-            </div>
-            <p>The best Gym Equipment is on sale at Fitness Club</p>
-            <button class="white">Collection</button>
-        </div>
-    </section>
-    <section id="banner3">
-        <div class="banner-box ">
-            <h2>SEASONAL SALE</h2>
-            <h3>Body Builder -60% OFF</h3>
-        </div>
-        <div class="banner-box banner-box2 ">
-            <h2>New waist trianner Collection</h2>
-            <h3>Young / Old</h3>
-        </div>
-        <div class="banner-box banner-box3 ">
-            <h2>name of tool</h2>
-            <h3>USE</h3>
-        </div>
-    </section>
-     <!--should be below the banner, scetion-p1=classname, section-m1 for margin -->
-    <section id="newletter" class="section-p1 section-m1">
-        <div class="newstext">
-            <h4>Sign Up For Newsletter </h4>
-            <!--the text in the span will be in a different color-->
-            <p>Get E-mail updates about latest shop and <span class="newsletter-span">special offers</span> </p>
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your email Address">
-            <button>Sign Up</button>
-        </div>
-    </section>
+    <form method="post" id="req-form">
+        <h2 class="sub-title">Request Form</h2>
+        <label>
+            <h4>First Name</h4>
+            <input type="text" name="first-name" required>
+        </label>
+        <label>
+            <h4>Last Name</h4>
+            <input type="text" name="last-name" required>
+        </label>
+        <label>
+            <h4>Email</h4>
+            <input type="text" name="email" required>
+        </label>
+        <label>
+            <h4>Phone Number</h4>
+            <input type="text" name="phone-no" required>
+        </label>
+        <label for="request-reason">
+            <h4>Detailed Reason</h4>
+            <textarea name="request-reason" id="req-reason"></textarea>
+        </label>
+        <input type="submit" value="Request" id="form-submit">
+    </form>
     
     <!--footer is for the contact details below the newslteer-->
     <footer class="section-p1">

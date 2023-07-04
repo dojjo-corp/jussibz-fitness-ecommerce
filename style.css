@@ -8,11 +8,13 @@
 :root {
     --color-primary: #538481;
     --color-secondary: #E3E6F3;
-    --color-text: #577e73;
+    --color-text: rgb(0, 0, 0);
     scroll-behavior: smooth;
 }
 
-
+.hidden {
+    display: none;
+}
 h1{
     font-size: 50px;
     line-height: 180%;
@@ -101,12 +103,13 @@ body{
     /* align-items: center; */
     /* justify-content: center; */
     gap: 20px;
-
+}
+.toggle-btn {
+    display: none;
 }
 #navbar li{
     list-style: none;
     position: relative;
-
 }
 #navbar li a{
     text-decoration: none;
@@ -268,20 +271,26 @@ button, .btn{
 
 /* FOOTER */
 footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     align-items: center;
-    justify-content: center;
-    width: 1fr;
-    height: 200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 200px;
     margin-top: 30px;
     background-color: var(--color-primary);
     color: var(--color-secondary);
     border-radius: 10px;
+    padding: 20px;
 }
 .icon-container {
     display: flex;
     gap: 10px;
     width: 30px;
+    margin-left: 10px;
+    /* justify-self: start; */
+    align-items: center;
+    justify-content: flex-start
 }
 .icon-container img {
     width: 15px;
@@ -299,14 +308,6 @@ footer {
 .shipping_shh{
     width: 150px;
     height: 150px;
-}
-
-   
-.banner-box{
-    display: grid;
-    grid-template-columns: repeat(7,400px);
-    gap: 10px;
-    text-align: center;
 }
 .box2{
     display: grid;
@@ -378,8 +379,43 @@ margin-top: 20px;
 }
 
 
-
 /* ***********************CHECKOUT PAGE*********************** */
+@media (max-width: 800px) {
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        width: 100px;
+    }
+    #navbar {
+        display: none;
+    }
+    #navbar.responsive {
+        background-color: var(--color-secondary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        /* position: absolute; */
+        right: 0;
+        top: 20px; 
+        z-index: 100;
+    }
+    #navbar a.active::after {
+        content: none!important;
+    }
+    .toggle-btn {
+        display: block;
+        width: fit-content;
+    }
+    aside {
+        display: none;
+    }
+    main {
+        margin: 20px;
+    }
+}
 /* 
 Can you see this? yeah
 check the "sproducts" this, which page? i think I'm lost
@@ -388,3 +424,51 @@ that's what ive named sproduct
 do you get it now?
 oh ok yh, but I can't find that file here o. write in that file lemme see
 I've seen it now. but move it into the main project folder */
+.pro{
+    background-color: var(--color-secondary);
+}
+.proImg{
+    width:50px;
+    height: 100px;
+    cursor: pointer;
+}
+#banner_1.Blog-header{
+    background-image: url(yoga/kids_1/traning/bannerImg.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#blog{
+padding: 150px 150px 0 150px;
+}
+#blog.blog-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+#blog.blog-img{
+    width:50% ;
+    margin-right: 40px;
+}
+#blog img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+#blog.blog details{
+    width:50% ;
+    
+}
+#blog.blog details a{
+    text-decoration: none;
+    font-size: 11px;
+    color: #000;
+    font-weight: 700;
+
+}

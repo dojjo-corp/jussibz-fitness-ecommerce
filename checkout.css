@@ -21,8 +21,21 @@ input {
 label[for="st-addr"], label[for="apt-no"] {
     grid-column: 1/3;
 }
+.payment {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+}
+.payment > * {
+    margin-bottom: 20px;
+}
+#card-type {
+    width: 100%;
+    height: 60px;
+}
 .order-summary-container {
     margin: 20px 0;
+    grid-column: 1/3;
 }
 .promo-btn {
     margin: 20px 0;
@@ -54,6 +67,6 @@ label[for="st-addr"], label[for="apt-no"] {
 /* ***************FOR MOBILE SCREENS*************** */
 @media (max-width: 800px) {
     label {
-        
+        grid-column: 1/3;
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="checkout.css">
 </head>
-<body>
+
+<body onload="summary()">
     <header id="header">
         <a href="#"><img src="images/logo.png" class="logo" alt=""> </a>
-        <div class="search-container">
-            <form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
-                <input type="search" class="search-box" placeholder="search...">
-                <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
-            </form>
-        </div>
-        <div>
+        
+        <div class="nav-container">
+            <button class="toggle-btn">Menu</button>
             <ul id="navbar">
+                <li><form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
+                    <input type="search" class="search-box" placeholder="search...">
+                    <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
+                </form></li>
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a class="active" href="Shop.html">Shop</a></li>
                 <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a class="active" href="about.html">About</a></li>
-                <li><a class="active" href="Contact.html">Contact</a></li>
-                <li> <a class="active" href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                <li><a class="active" href="cart.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -40,87 +40,116 @@
             <button>Go To Cart</button>
         </a>
     </aside>
-    
+
     <main>
         <div class="checkout-form">
             <h1 class="section-title">Checkout </h1>
-            <form action="" method="post">
-                <label for="first-name">
-                    <input class="input-no" type="text" name="first-name" placeholder="First-name" required>
+            <form action="" method="post" id="checkout-form" onsubmit="validateForm()">
+                <label for="first-name">First Name
+                    <input class="input-no" type="text" name="first-name" placeholder="First-name" required
+                        pattern="[A-Za-z]+">
                 </label>
-                <label for="last-name">
-                    <input class="input-no" type="text" name="last-name" placeholder="Last-name" requuired>
+                <label for="last-name">Last Name
+                    <input class="input-no" type="text" name="last-name" placeholder="Last-name" required
+                        pattern="[A-Za-z]+">
                 </label>
-                <label for="st-addr">
-                    <input class="input-No" type="text" name="st-addr" placeholder="Street-address"requuired>
+                <label for="st-addr">Street Address
+                    <input class="input-No" type="text" name="st-addr" placeholder="Street-address" required>
                 </label>
-                <label for="apt-no">
-                    <input class="input-No" type="text" name="apt-no" placeholder="Apartment No"requuired>
+                <label for="apt-no">Apartment No.
+                    <input class="input-No" type="text" name="apt-no" placeholder="Apartment No" reuuired>
                 </label>
-                <label for="first-name">
-                    <input class="input-no" type="text" name="first-name" placeholder="City"requuired>
+                <label for="city">City
+                    <input class="input-no" type="text" name="city" placeholder="City" required
+                        pattern="[A-Za-z]+">
+                    </label>
+                <label for="province">Province
+                    <input class="input-no" type="text" name="province" placeholder="Province" required>
                 </label>
-                <label for="first-name">
-                    <input class="input-no" type="text" name="first-name" placeholder="Provence"requuired>
+                <label for="postal-code">Postal Code
+                    <input type="text" name="postal-code" placeholder="Postal Code" required pattern="[0-9]">
                 </label>
-                <label for="first-name">
-                    <input type="text" name="first-name" placeholder="Postal Code"requuired>
-                </label>
-            </form>
-            <div class="order-summary-container"> 
-                <h2 class="font-subtit1le1"></h2>ORDER SUMMARY</h2>
-                <div class="flex-row"><span>Subtotal</span><span>$74.98CDN</span> </div>
-                <div class="flex-row"><span>Taxes</span> <span>-</span></div>
-                <div class="flex-row"><span>Shipping (items)</span><span>-</span></div>
-                <hr>
-                <h2 class="font-subtit1le1 flex-row">
-                    <span>TOTAl</span>
-                    <span>$74.8CDN</span>
-                </h2>
-                <button class="promo-btn">APPLY  PRO CODE OR DISCOUNT</button>
 
-            </div>
-           <div>
+                <div class="payment">
+                    <h2 class="sub-title">Payment</h2>
+                    <select name="card-type" id="card-type">
+                        <option value="" selected>Choose card type...</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="visa">Visa Card</option>
+                    </select>
+                    <label for="card-no">
+                        Card No.
+                        <input type="text" placeholder="Card No." name="card-no" required>
+                    </label>
+                    <label for="cc">
+                        CC
+                        <input type="text" placeholder="CC" name="cc" required>
+                    </label>
+                    <label for="card-expiry">
+                        Date of Expiry
+                        <input type="date" name="card-expiry" required>
+                    </label>
+                </div>
+
+                <div class="order-summary-container">
+                    <h2 class="font-subtit1le1"></h2>ORDER SUMMARY</h2>
+                    <div class="flex-row">Subtotal<span id="subtotal">$74.98</span> </div>
+                    <div class="flex-row">Taxes <span id="tax">-</span></div>
+                    <div class="flex-row">Shipping (items)<span id="shipping-fee">$10.99</span></div>
+                    <hr>
+                    <h2 class="font-subtit1le1 flex-row">
+                        TOTAL
+                        <span id="total">$74.8</span>
+                    </h2>
+                    <input class="btn" type="submit" value="FINISH CHECKOUT">
+
+                </div>
+            </form>
+
+            <div class="bag-summary">
                 <h2 class="font-subtit1le1">BAG SUMMARY</h2>
                 <p>Arrives in 4-7days</p>
-                <div class="adjectment">
+                <div class="adjustment hidden">
                     <img class="summary-img" src="images/pexels-lukas-669577.jpg" alt="">
                     <div>
-                        <p>product name</p>
-                        <p><span>Price</span><span>$65.67 CDN</span></p>
+                        <p class="summary-name">product name</p>
+                        <p>Price: $<span class="summary-price">00.00</span></p>
                         <p>Quantity:1</p>
                         <div>
-                            <button>Remove</button>
-                            <button>Edit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="adjectment">
-                    <img class="summary-img" src="images/pexels-lukas-669577.jpg" alt="">
-                    <div>
-                        <p>product name</p>
-                        <p>Price<span>$65.67 CDN</span></p>
-                        <p>Quantity:1</p>
-                        <div>
-                            <button>Remove</button>
+                            <button class="rm-">Remove</button>
                             <button>Edit</button>
                         </div>
                     </div>
                 </div>
             </div>
-
             
-
         </div>
 
-        <footer class="section-p1">
+        <footer>
             <div class="col">
-                <h4>Contact</h4>
-                <p> <strong>address:</strong>Harruna Esseku, 3 street 534-13</p>
+                <p><h4>Contact</h4></p>
+                <p><strong>address:</strong>Harruna Esseku, 3 street 534-13</p>
                 <p> <strong>Phone:</strong> 0270257754 </p>
                 <p> <strong>Hours:</strong>9:00 - 18:00, Mon-Sat </p>
             </div>
+            <div class="icon-container col">
+                <h4>Follow Us on</h4>
+                <div class="icon-container">
+                    <a href="https://www.facebook.com">
+                        <img src="images/icons/facebook.png" alt="facebook-icon">
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <img src="images/icons/instagram.png" alt="instagram-icon">
+                    </a>
+                    <a href="https://www.twitter.com">
+                        <img src="images/icons/twitter.png" alt="twitter-icon">
+                    </a>
+                </div>
+            </div>
         </footer>
     </main>
+    <script src="scrpt.js"></script>
 </body>
+
 </html>

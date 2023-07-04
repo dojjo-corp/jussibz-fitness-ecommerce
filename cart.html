@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cart.css">
+    <!-- SCRIPT -->
+    <script src="scrpt.js" defer></script>
 </head>
-<body>
+
+<body onload="addToCart()">
     <header id="header">
         <a href="#"><img src="images/logo.png" class="logo" alt=""> </a>
-        <div class="search-container">
-            <form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
-                <input type="search" class="search-box" placeholder="search...">
-                <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
-            </form>
-        </div>
-        <div>
+        <div class="nav-container">
+            <button class="toggle-btn">Menu</button>
             <ul id="navbar">
+                <li>
+                    <form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
+                        <input type="search" class="search-box" placeholder="search...">
+                        <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
+                    </form>
+                </li>
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a class="active" href="Shop.html">Shop</a></li>
                 <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a class="active" href="about.html">About</a></li>
-                <li><a class="active" href="Contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -39,34 +43,16 @@
             <button>Go To Cart</button>
         </a>
     </aside>
-    
     <main>
         <h2 class="section-title">CART</h2>
-        <div class="cart-wrapper">
-            <div class="cart-item">
-                <img class="image-cart" src="images/pexels-dom-j-45056.jpg" alt="">
-                <h4>NAME:</h4>
-                <p class="item-qty">
-                    Quantity: <span class="sub-total">$50.00</span>
-                </p>
-                <button class="btn-remove">Remove</button>
-            </div>
-            <div class="cart-item" >
-                <img class="image-cart" src="images/Screen_Shot_2016-03-05_at_12.09.18_67b02c69-65da-464d-b3b8-62b61df4837f_555x.webp" alt="">
-                <h4>NAME:</h4>
-                <p class="item-qty">
-                    Quantity: <span class="sub-total">$50.00</span>
-                </p>
-                <button class="btn-remove">Remove</button>
-            </div>
-        </div>
+        <div class="cart-wrapper"></div>
         <div class="total-cost">
             <h3>Total: <span>$100.00</span></h3>
         </div>
         <div class="checkbox-container">
-                <a href="checkout.html">
-                    <button>Checkout</button>
-                </a>
+            <a href="checkout.html">
+                <button>Checkout</button>
+            </a>
         </div>
         <footer class="section-p1">
             <div class="col">
@@ -89,4 +75,5 @@
         </footer>
     </main>
 </body>
+
 </html>

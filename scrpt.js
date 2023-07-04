@@ -60,7 +60,7 @@ function getUserSelection(event) {
     window.sessionStorage.setItem("cartList", JSON.stringify(cartList));
 }
 
-// TODO: add to cart button
+// TODO: add to cart page
 function addToCart() {
     var wrapper = document.querySelector(".cart-wrapper");
     // TODO: GET USER'S SELECTION LIST FROM LIST OF PRODUCTS
@@ -202,5 +202,9 @@ function showProductDetails() {
 
     var detailsBtn = singleProDetails.querySelector(".cart-btn")
     detailsBtn.setAttribute("data-id", proDetailItem.id);
-    detailsBtn.addEventListener("click", addToCart);
+    detailsBtn.addEventListener("click", function(){
+        var cart = JSON.parse(window.sessionStorage.getItem("cartList"));
+        cart.push(proDetailItem);
+        window.sessionStorage.setItem("cartList", JSON.stringify(cart));
+    });
 }

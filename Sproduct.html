@@ -9,33 +9,31 @@
     <link rel="stylesheet" href="assets/fontawesome/css/regular.min.css">
     <link rel="stylesheet" href="assets/fontawesome/webfonts/fa-regular-400.ttf">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body>
+<body onload="showProductDetails()">
     <header id="header">
-        <a href="#"><img src="images/logo.png" class="logo" alt=""> </a>
-        <div class="search-container">
-            <form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
-                <input type="search" class="search-box" placeholder="search...">
-                <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
-            </form>
-        </div>
-        <div>
+        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+
+        <div class="nav-container">
+            <button class="toggle-btn">Menu</button>
             <ul id="navbar">
+                <li><form action="index.html#Product1" onsubmit="searchProduct()" class="search-form">
+                    <input type="search" class="search-box" placeholder="search...">
+                    <input type="image" src="images/icons/loupe.png" alt="search" class="search-icon">
+                </form></li>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a class="active" href="about.html">About</a></li>
-                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <section id="prodetails" class="section-p1">
+    <section id="prodetails-section" class="section-p1">
         <div class="single-pro-image">
             <img src="images/yoga/png-transparent-yoga-pilates-mats-purple-color-children-taekwondo-material-purple-color-sports-equipment-removebg-preview.png"
                 width="100%" id="MainImg" alt="">
-
         </div>
         <div class="small-img-group">
             <div class="small-img-col">
@@ -52,13 +50,12 @@
             </div>
         </div>
         <div class="single-pro-details">
-            <h6>Featured Products</h6>
-            <h4>New Traning Equippments</h4>
-            <h2>$87</h2>
-            <input type="number" value="1">
-            <button class="normal">Add To Cart</button>
+            <h2 class="details-name">Details Name</h2>
+            <h4 class="details-price">$87</h4>
+            <!-- <input type="number" value="1"> -->
+            <button class="cart-btn">Add To Cart</button>
             <h4>Product Details</h4>
-            <p>When we think of treadmills nowadays, we think of LED displays, brightly lit gyms, and brutal cardio
+            <p class="details-para">When we think of treadmills nowadays, we think of LED displays, brightly lit gyms, and brutal cardio
                 workouts.
                 The origins of the humble treadmill, however, can be traced back to, surprise, surprise, the Ancient
                 Romans.
@@ -72,7 +69,7 @@
         <h2 class="section-title">Featured Products</h2>
         <p class="sub-title"> New Traning Equippments </p>
         <div class="pro-container">
-            <div class="pro">
+            <div class="pro" id="featured_00">
                 <img src="images/cardio/Gym-Equipment-Background-PNG-Image.png" alt="">
                 <div class="description">
                     <span>Brand Name - not</span>
@@ -85,7 +82,7 @@
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" id="featured_01">
                 <img src="images/kids/exercise-equipment-for-children-removebg-preview.png" alt="">
                 <div class="description">
                     <span>Brand Name</span>
@@ -98,7 +95,7 @@
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" id="featured_02">
                 <img src="images/strength/bench-press-removebg-preview.png" alt="">
                 <div class="description">
                     <span>Brand Name - not</span>
@@ -111,7 +108,7 @@
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" id="featured_03">
                 <img src="images/yoga/kisspng-dumbbell-physical-exercise-exercise-equipment-barb-color-dumbbell-5a7d5637a435a5.2096580015181635116726-removebg-preview.png"
                     alt="">
                 <div class="description">

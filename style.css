@@ -98,7 +98,7 @@ body{
     width: 30px;
     height: 30px;
 }
-.navbar{
+#navbar{
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
@@ -107,22 +107,22 @@ body{
 .toggle-btn {
     display: none;
 }
-.navbar li{
+#navbar li{
     list-style: none;
     position: relative;
 }
-.navbar li a{
+#navbar li a{
     text-decoration: none;
     font-size: 14px;
     font-weight: 600px;
     color: black;
     transition: 0.4s east;
 }
-.navbar li a:hover,
-.navbar li a.active{
+#navbar li a:hover,
+#navbar li a.active{
     color:var(--color-primary);
 }
-.navbar li a.active::after{
+#navbar li a.active::after{
     content: "";
     width: 30%;
     height: 2px;
@@ -164,6 +164,7 @@ aside {
     gap: 20px;
     text-align: center;
 }
+aside h3 {}
 aside a {
     text-decoration: none;
     color: var(--color-text);
@@ -397,7 +398,7 @@ margin-top: 20px;
     #navbar {
         display: none;
     }
-    .responsive {
+    #navbar.responsive {
         background-color: var(--color-secondary);
         display: flex;
         flex-direction: column;
@@ -408,7 +409,7 @@ margin-top: 20px;
         top: 20px; 
         z-index: 100;
     }
-    .navbar a.active::after {
+    #navbar a.active::after {
         content: none!important;
     }
     .toggle-btn {

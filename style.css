@@ -98,7 +98,7 @@ body{
     width: 30px;
     height: 30px;
 }
-#navbar{
+.navbar{
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
@@ -107,22 +107,22 @@ body{
 .toggle-btn {
     display: none;
 }
-#navbar li{
+.navbar li{
     list-style: none;
     position: relative;
 }
-#navbar li a{
+.navbar li a{
     text-decoration: none;
     font-size: 14px;
     font-weight: 600px;
     color: black;
     transition: 0.4s east;
 }
-#navbar li a:hover,
-#navbar li a.active{
+.navbar li a:hover,
+.navbar li a.active{
     color:var(--color-primary);
 }
-#navbar li a.active::after{
+.navbar li a.active::after{
     content: "";
     width: 30%;
     height: 2px;
@@ -130,6 +130,9 @@ body{
     position: absolute;
     bottom: -4px;
     left: 20px;
+}
+#mobile-navbar {
+    display: none;
 }
 
 /* CONTENT WRAPPER */
@@ -161,7 +164,6 @@ aside {
     gap: 20px;
     text-align: center;
 }
-aside h3 {}
 aside a {
     text-decoration: none;
     color: var(--color-text);
@@ -381,6 +383,10 @@ margin-top: 20px;
 
 /* ***********************CHECKOUT PAGE*********************** */
 @media (max-width: 800px) {
+    .logo{
+        width: 100px;
+        height: auto; 
+    }
     .nav-container {
         display: flex;
         flex-direction: column;
@@ -391,7 +397,7 @@ margin-top: 20px;
     #navbar {
         display: none;
     }
-    #navbar.responsive {
+    .responsive {
         background-color: var(--color-secondary);
         display: flex;
         flex-direction: column;
@@ -402,7 +408,7 @@ margin-top: 20px;
         top: 20px; 
         z-index: 100;
     }
-    #navbar a.active::after {
+    .navbar a.active::after {
         content: none!important;
     }
     .toggle-btn {
@@ -416,14 +422,6 @@ margin-top: 20px;
         margin: 20px;
     }
 }
-/* 
-Can you see this? yeah
-check the "sproducts" this, which page? i think I'm lost
-ive created a new file for the single page something nu , the one that will give more details to the product :no-button
-that's what ive named sproduct
-do you get it now?
-oh ok yh, but I can't find that file here o. write in that file lemme see
-I've seen it now. but move it into the main project folder */
 .pro{
     background-color: var(--color-secondary);
 }

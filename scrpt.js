@@ -1,6 +1,6 @@
 var toggleBtn = document.querySelector(".toggle-btn");
 // TODO: make navbar responsive
-var navbar = document.querySelector("#navbar");
+var navbar = document.querySelector("#mobile-navbar");
 toggleBtn.addEventListener("click", function(){
     navbar.classList.toggle("responsive");
 })
@@ -65,6 +65,8 @@ function addToCart() {
     var wrapper = document.querySelector(".cart-wrapper");
     // TODO: GET USER'S SELECTION LIST FROM LIST OF PRODUCTS
     var cartItems = JSON.parse(window.sessionStorage.getItem("cartList"));
+    var priceElem = document.querySelector(".total-cost").querySelector("span")
+    var totalPrice = 0;
     cartItems.forEach((item) => {
         var img = item.img;
         var name = item.name;
@@ -90,9 +92,10 @@ function addToCart() {
         cartItem.appendChild(cartPrice);
         cartItem.appendChild(btn);
 
-
-
+        // get total cost of cart items
+        totalPrice += price;
     })
+
 }
 
 // for search bar
